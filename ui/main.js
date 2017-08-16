@@ -26,7 +26,7 @@ submit.onclick = function(){
   //make a request to the server and send the name
   
   //capture the list of name and render it as a undfined list
-  var names = ["name1","name2","name3","name4"];
+  var names = ['name1' , 'name2' , 'name3'];
   var list = " ";
   for (var i=1; i < names.length; i++)
   {
