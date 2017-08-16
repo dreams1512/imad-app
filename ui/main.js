@@ -1,7 +1,7 @@
 console.log('Loaded!');
-alert ('modified main.js');
-var element = document.getElementById('main-text');
-element.innerHTML = "new text modified by main.js";
+//alert ('modified main.js');
+//var element = document.getElementById('main-text');
+//element.innerHTML = "new text modified by main.js";
 var img = document.getElementById('madi');
 var marginLeft = 0;
 function moveRight() {
