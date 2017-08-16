@@ -80,7 +80,7 @@ app.get('/counter', function (req, res) {
 
 app.get('/submit-name', function (req, res) { //submit-name?name-xxxx
     //get name from request
-    var name= req.query.name;
+    var names= req.query.name;
     names.push(name);
     //JSON - java script object notation
     res.send(JSON.stringify(names));
