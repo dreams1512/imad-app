@@ -14,7 +14,7 @@ var config = {
 
 var app = express();
 app.use(morgan('combined'));
-var articles = {
+/*var articles = {
     articleOne:{
       title:"Article 1",
       heading: "article 1",
@@ -34,7 +34,7 @@ var articles = {
       date: "Aug 24 2017",
       content:`<p>"This is Article 3"</p>`
     },
-};
+}; */
 
 function createTemplate(data)
 {
