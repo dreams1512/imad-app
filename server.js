@@ -79,7 +79,7 @@ app.get('/', function (req, res) {
 function hash(input, salt) {
     //how do we create Hash -- we will use the default library Crypto - google -node crypto
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
-    return hashed.toString('hex'); // to return as string and hexadecimal encoding to readable on screen
+    return ["pbkdf2", "10000" , salt, hashed.toString('hex')].join('$'); // to return hash function which we are using and number of iteration , salt and hashed value as string and hexadecimal encoding to readable on screen
 }
 
 app.get('/hash/:input', function(req,res){
