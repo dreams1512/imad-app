@@ -110,7 +110,7 @@ app.post('/create-user', function(req,res) {
     });
 });
     
-var pool = new Pool(config);
+
 app.post('/login', function(req,res) {
     //username, password
     var username = req.body.username;
