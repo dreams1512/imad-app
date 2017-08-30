@@ -110,7 +110,7 @@ app.post('/create-user', function(req,res) {
     });
 });
     
-
+var pool = new Pool(config);
 app.post('/login', function(req,res) {
     //username, password
     var username = req.body.username;
@@ -133,11 +133,10 @@ app.post('/login', function(req,res) {
                        var hashedpassword = hash(password,salt);
                        if (hashedpassword === dbString){
                            res.send("Credentials Correct!!");
-                       }else
+                    }else
                        {
                            res.send("invalid username/password");
                        }
-                
             }
             }
     });
