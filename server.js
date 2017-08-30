@@ -119,14 +119,14 @@ app.post('/login', function(req,res) {
         if (err)
             {
             res.status(500).send(err.toString());
-            console.log ("error")
+            
             }
             else 
             {
                 if(result.rows.length === 0)
                 {
-                    res.send(403).send("username or password invalid");
-                    console.log ("no rows")
+                    res.status(403).send("username or password invalid");
+              
                 } else
                    { 
                        //match the password
@@ -138,7 +138,7 @@ app.post('/login', function(req,res) {
                            res.send("Credentials Correct!!");
                     }else
                        {
-                           res.send(403).send("invalid username/password");
+                           res.status(403).send("invalid username/password");
                        }
             }
             }
