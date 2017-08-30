@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 var config = {
     user: 'dreams1512',
     database: 'dreams1512',
@@ -90,7 +90,7 @@ app.get('/hash/:input', function(req,res){
     res.send(hashedString);
 });
 
-
+var pool = new Pool(config);
 app.post('/create-user', function(req,res) {
     //username, password
     //JSON -- {'username' : 'dream' , 'password' : 'test'}
